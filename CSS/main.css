@@ -176,7 +176,9 @@ header .content h1
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -242,7 +244,10 @@ header .content h1
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
@@ -257,7 +262,10 @@ header .content h1
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
     max-width: 100%;
 }
 .products .content .card .textBox
@@ -364,22 +372,34 @@ header .content h1
     padding: 20px 0;
     margin: 0 20px;
     border-radius: 20px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 .price .content .cards .card:hover
 {
+    background: -o-linear-gradient(45deg, #03D6F3, #CB1AE8);
     background: linear-gradient(45deg, #03D6F3, #CB1AE8);
-    box-shadow: 0px 0px 20px #000000c0;
+    -webkit-box-shadow: 0px 0px 20px #000000c0;
+            box-shadow: 0px 0px 20px #000000c0;
     color: #fff;
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 /****************SUBSCRIBE****************/
 .subscribe
 {
     min-height: 40vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 .subscribe .content
@@ -417,15 +437,25 @@ footer a
 }
 footer .content
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 footer .links
 {
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -454,27 +484,46 @@ footer .location img
 footer .social
 {
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         text-align: left;
         align-items: center;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
 }
 footer .social .loc,
 footer .social .phone
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 20px;
 }
 footer .social .media ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 footer .social .media ul li
 {
@@ -483,6 +532,8 @@ footer .social .media ul li
 }
 footer .social .media ul li a img
 {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 footer .social .media ul li a:hover img
@@ -592,7 +643,9 @@ footer .social .media ul li a:hover img
     .features .content
     {
         text-align: center;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .features .content .card
     {
@@ -601,7 +654,9 @@ footer .social .media ul li a:hover img
     }
     .features .content .card:hover
     {
-        transform: translateY(0) scale(1.10);
+        -webkit-transform: translateY(0) scale(1.10);
+            -ms-transform: translateY(0) scale(1.10);
+                transform: translateY(0) scale(1.10);
     }
     /*************PRODUCTS&PROJECTS*************/
     .products,
@@ -612,13 +667,18 @@ footer .social .media ul li a:hover img
     .products .content,
     .projects .content
     {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .products .content .card,
     .projects .content .card
     {
         width: 100%;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
     }
     .products .content .card .textBox,
@@ -638,7 +698,10 @@ footer .social .media ul li a:hover img
     /*************PRICE*************/
     .price .content .cards
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
     }
     .price .content .cards .card
@@ -659,8 +722,13 @@ footer .social .media ul li a:hover img
     /*********FOOTER***********/
     footer .content
     {
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     footer .links
     {
