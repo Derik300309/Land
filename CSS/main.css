@@ -201,6 +201,7 @@ header .content h1
     -o-transition: all 0.3s; 
     transition: all 0.3s;
     margin: 10px 0;
+    z-index: 1;
 }
 .features .content .card img
 {
